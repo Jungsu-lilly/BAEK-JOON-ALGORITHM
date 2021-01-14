@@ -1,14 +1,14 @@
 #include <iostream>
 using namespace std;
 
-void lab01(void) // ÀÓÀÇÀÇ ¼¼ ¼ö¸¦ ¿À¸¥Â÷¼øÀ¸·Î Á¤·Ä.
+void lab01(void) // ì„ì˜ì˜ ì„¸ ìˆ˜ë¥¼ ì˜¤ë¥¸ì°¨ìˆœìœ¼ë¡œ ì •ë ¬.
 {
 	int a, b, c;
 	cin >> a >> b >> c;
 	int min = 1;
 	int max = 1000000;
 	if (a > max || b > max || c > max || a < min || b < min || c < min) {
-		cout << "°ªÀÇ ¹üÀ§¸¦ ³Ñ¾ú½À´Ï´Ù." << endl;
+		cout << "ê°’ì˜ ë²”ìœ„ë¥¼ ë„˜ì—ˆìŠµë‹ˆë‹¤." << endl;
 		return;
 	}
 
@@ -32,7 +32,7 @@ void lab01(void) // ÀÓÀÇÀÇ ¼¼ ¼ö¸¦ ¿À¸¥Â÷¼øÀ¸·Î Á¤·Ä.
 		}
 	}
 
-//	cout << "Á¤·Ä ¿Ï·á" << endl;
+//	cout << "ì •ë ¬ ì™„ë£Œ" << endl;
 	for (int i = 0; i < 3; i++) {
 		cout << arr[i] << " ";
 	}
@@ -41,27 +41,27 @@ void lab01(void) // ÀÓÀÇÀÇ ¼¼ ¼ö¸¦ ¿À¸¥Â÷¼øÀ¸·Î Á¤·Ä.
 
 
 
-void QuickSort(int*arr, int start, int end) // ¿À¸§Â÷¼øÀ¸·Î Á¤·Ä
+void QuickSort(int*arr, int start, int end) // ì˜¤ë¦„ì°¨ìˆœìœ¼ë¡œ ì •ë ¬
 {
 	if (start >= end) {
 		return;
 	}
 
-	int key = start; // ÇÇ¹ş°ª
+	int key = start; // í”¼ë²—ê°’
 	int i = start + 1;
 	int j = end;
 	int temp;
 
 	while (i <= j)
-	{  // ¾ù°¥¸± ¶§±îÁö ¹İº¹
+	{  // ì—‡ê°ˆë¦´ ë•Œê¹Œì§€ ë°˜ë³µ
 		while (arr[i] <= arr[key]) {
-			i++; // i´Â ÇÇ¹ş°ªº¸´Ù Å«°ªÀ» Å½»öÇÔ
+			i++; // iëŠ” í”¼ë²—ê°’ë³´ë‹¤ í°ê°’ì„ íƒìƒ‰í•¨
 		}
 		while (arr[j] >= arr[key] && j > start) {
-			j--; // j´Â ÇÇ¹ş°ªº¸´Ù ÀÛÀº°ªÀ» Å½»öÇÔ
+			j--; // jëŠ” í”¼ë²—ê°’ë³´ë‹¤ ì‘ì€ê°’ì„ íƒìƒ‰í•¨
 		}
 
-		if (i > j) {	// ÇöÀç ¾ù°¥¸° »óÅÂ¸é
+		if (i > j) {	// í˜„ì¬ ì—‡ê°ˆë¦° ìƒíƒœë©´
 			temp = arr[j];
 			arr[j] = arr[key];
 			arr[key] = temp;
@@ -87,7 +87,7 @@ void lab02()
 
 	if (n < 1 || n > 1000)
 	{
-		cout << "¹üÀ§¿À·ù" << endl;
+		cout << "ë²”ìœ„ì˜¤ë¥˜" << endl;
 		return;
 	}
 
@@ -116,7 +116,7 @@ void lab03() {
 	int n;
 	cin >> n;
 	if (n<min || n>max) {
-		cout << "¹üÀ§ ¿À·ù!" << endl;
+		cout << "ë²”ìœ„ ì˜¤ë¥˜!" << endl;
 		return;
 	}
 
@@ -124,7 +124,7 @@ void lab03() {
 		int c;
 		cin >> c;
 		if (c<-max || c>max) {
-			cout << "¹üÀ§¿À·ù!" << endl;
+			cout << "ë²”ìœ„ì˜¤ë¥˜!" << endl;
 		}
 		arr[i] = c;
 	}
