@@ -24,6 +24,7 @@ int main(void)
 	cin >> n >> v;
 	if (n > 100)
 		return -1;
+	
 
 	vector<int>* vec = new vector<int>[n + 1];
 	for (int i = 0; i < v; i++)
