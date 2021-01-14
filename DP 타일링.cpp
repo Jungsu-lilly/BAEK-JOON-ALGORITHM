@@ -32,7 +32,6 @@ int Tile2(int x)
 	return d[x] = (Tile2(x - 1) + 2 * Tile2(x - 2)) % 10007;
 }
 
-
 int Tile3(int x)
 {
 	if (x == 0)return 1;
