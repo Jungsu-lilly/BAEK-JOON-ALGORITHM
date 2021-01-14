@@ -44,3 +44,4 @@ int main(void)
 	cout << num-1 << endl;
 	return 0;
 }
+
