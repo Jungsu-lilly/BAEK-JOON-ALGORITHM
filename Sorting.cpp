@@ -30,7 +30,7 @@ void lab01(void) // 임의의 세 수를 오른차순으로 정렬.
 			arr[0] = arr[1];
 			arr[1] = temp;
 		}
-	}
+	} 
 
 //	cout << "정렬 완료" << endl;
 	for (int i = 0; i < 3; i++) {
