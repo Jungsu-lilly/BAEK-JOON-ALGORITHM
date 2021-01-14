@@ -31,13 +31,14 @@ void BFS(int start,vector <int>a[],bool check[])
 		for (int i = 0; i < a[t].size(); i++) 
 		{
 			int next = a[t][i];
-			if (check[next] != true) { // �湮���� �ʾҴٸ�
+			if (check[next] != true) { // ¹æ¹®ÇÏÁö ¾Ê¾Ò´Ù¸é
 				q.push(next);
 				check[next] = true;
 			}
 		}
 	}
 }
+
 
 
 int main(void)
