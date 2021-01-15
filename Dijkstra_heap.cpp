@@ -6,39 +6,36 @@ using namespace std;
 int number = 6;
 int INF = 100000000;
 
-vector<pair<int, int>> a[7]; // °£¼± Á¤º¸
+vector<pair<int, int>> a[7]; // ê°„ì„  ì •ë³´
 
-int d[7]; // ÃÖ¼Òºñ¿ë
+int d[7]; // ìµœì†Œë¹„ìš©
 
 void dijkstra(int start) {
 
 	d[start] = 0;
-	priority_queue<pair<int, int>> pq; // Èü ±¸Á¶
+	priority_queue<pair<int, int>> pq; // í™ êµ¬ì¡°
 
 	pq.push(make_pair(start, 0));
-	// °¡±î¿î ¼ø¼­´ë·Î Ã³¸®ÇÏ¹Ç·Î Å¥¸¦ »ç¿ë
+	// ê°€ê¹Œìš´ ìˆœì„œëŒ€ë¡œ ì²˜ë¦¬í•˜ë¯€ë¡œ íë¥¼ ì‚¬ìš©
 	
 	while (!pq.empty()) {
 
-		int current = pq.top().first; // °ÅÃÄ°¡´Â ³ëµå
+		int current = pq.top().first; // ê±°ì³ê°€ëŠ” ë…¸ë“œ
 
-		int distance = -pq.top().second; // ÂªÀº °ÍÀÌ ¸ÕÀú ¿Àµµ·Ï À½¼öÈ­
+		int distance = -pq.top().second; // ì§§ì€ ê²ƒì´ ë¨¼ì € ì˜¤ë„ë¡ ìŒìˆ˜í™”
 
 		pq.pop();
 
-		if (d[current] < distance) 
-			continue;
-
 		for (int i = 0; i < a[current].size(); i++){
-			// ¼±ÅÃµÈ ³ëµåÀÇ ÀÎÁ¢³ëµå
+			// ì„ íƒëœ ë…¸ë“œì˜ ì¸ì ‘ë…¸ë“œ
 			int next = a[current][i].first;
 
 			if (next == start) continue;
 
-			// ¼±ÅÃµÈ ³ëµå¸¦ ÀÎÁ¢ ³ëµå·Î °ÅÃÄ¼­ °¡´Â ºñ¿ë
+			// ì„ íƒëœ ë…¸ë“œë¥¼ ì¸ì ‘ ë…¸ë“œë¡œ ê±°ì³ì„œ ê°€ëŠ” ë¹„ìš©
 			int nextDistance = distance + a[current][i].second;
 
-			// ±âÁ¸ÀÇ ÃÖ¼Ò ºñ¿ëº¸´Ù Àú·ÅÇÏ´Ù¸é
+			// ê¸°ì¡´ì˜ ìµœì†Œ ë¹„ìš©ë³´ë‹¤ ì €ë ´í•˜ë‹¤ë©´
 			if (nextDistance < d[next]) {
 				d[next] = nextDistance;
 				pq.push(make_pair(next, -nextDistance));
