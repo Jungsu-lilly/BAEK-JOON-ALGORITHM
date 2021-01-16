@@ -20,27 +20,27 @@ void InsertionSort(int* arr, int len)
 	}
 }
 
-void QuickSort(int*arr, int start, int end) // ¿À¸§Â÷¼øÀ¸·Î Á¤·Ä
+void QuickSort(int*arr, int start, int end) // ì˜¤ë¦„ì°¨ìˆœìœ¼ë¡œ ì •ë ¬
 {
 	if (start >= end) {
 		return;
 	}
 
-	int key = start; // ÇÇ¹ş°ª
+	int key = start; // í”¼ë²—ê°’
 	int i = start + 1; 
 	int j = end;
 	int temp;
 
 	while (i <= j)
-	{  // ¾ù°¥¸± ¶§±îÁö ¹İº¹
+	{  // ì—‡ê°ˆë¦´ ë•Œê¹Œì§€ ë°˜ë³µ
 		while (arr[i] <= arr[key]) {
-			i++; // i´Â ÇÇ¹ş°ªº¸´Ù Å«°ªÀ» Å½»öÇÔ
+			i++; // iëŠ” í”¼ë²—ê°’ë³´ë‹¤ í°ê°’ì„ íƒìƒ‰í•¨
 		}
 		while (arr[j] >= arr[key]&& j>start) {
-			j--; // j´Â ÇÇ¹ş°ªº¸´Ù ÀÛÀº°ªÀ» Å½»öÇÔ
+			j--; // jëŠ” í”¼ë²—ê°’ë³´ë‹¤ ì‘ì€ê°’ì„ íƒìƒ‰í•¨
 		}
 
-		if (i > j) {	// ÇöÀç ¾ù°¥¸° »óÅÂ¸é
+		if (i > j) {	// í˜„ì¬ ì—‡ê°ˆë¦° ìƒíƒœë©´
 			temp = arr[j];
 			arr[j] = arr[key];
 			arr[key] = temp;
@@ -57,27 +57,27 @@ void QuickSort(int*arr, int start, int end) // ¿À¸§Â÷¼øÀ¸·Î Á¤·Ä
 }
 
 
-void QuickSort2(int*arr, int start, int end) // ³»¸²Â÷¼øÀ¸·Î Á¤·Ä
+void QuickSort2(int*arr, int start, int end) // ë‚´ë¦¼ì°¨ìˆœìœ¼ë¡œ ì •ë ¬
 {
 	if (start >= end) {
 		return;
 	}
 
-	int key = start; // ÇÇ¹ş°ª
+	int key = start; // í”¼ë²—ê°’
 	int i = start + 1;
 	int j = end;
 	int temp;
 
 	while (i <= j)
-	{  // ¾ù°¥¸± ¶§±îÁö ¹İº¹
+	{  // ì—‡ê°ˆë¦´ ë•Œê¹Œì§€ ë°˜ë³µ
 		while (arr[i] >= arr[key]) {
-			i++; // i´Â ÇÇ¹ş°ªº¸´Ù ÀÛÀº°ªÀ» Å½»öÇÔ
+			i++; // iëŠ” í”¼ë²—ê°’ë³´ë‹¤ ì‘ì€ê°’ì„ íƒìƒ‰í•¨
 		}
 		while (arr[j] <= arr[key] && j > start) {
-			j--; // j´Â ÇÇ¹ş°ªº¸´Ù Å«°ªÀ» Å½»öÇÔ
+			j--; // jëŠ” í”¼ë²—ê°’ë³´ë‹¤ í°ê°’ì„ íƒìƒ‰í•¨
 		}
 
-		if (i > j) {	// ÇöÀç ¾ù°¥¸° »óÅÂ¸é
+		if (i > j) {	// í˜„ì¬ ì—‡ê°ˆë¦° ìƒíƒœë©´
 			temp = arr[j];
 			arr[j] = arr[key];
 			arr[key] = temp;
@@ -101,7 +101,7 @@ void merge(int arr[], int m, int middle, int n)
 	int j = middle + 1;
 	int k = m;
 
-	// ÀÛÀº ¼ø¼­´ë·Î ¹è¿­¿¡ »ğÀÔ
+	// ì‘ì€ ìˆœì„œëŒ€ë¡œ ë°°ì—´ì— ì‚½ì…
 	while (i <= middle && j <= n)
 	{
 		if (arr[i] <= arr[j]) {
@@ -115,7 +115,7 @@ void merge(int arr[], int m, int middle, int n)
 		k++;
 	}
 
-	// ³²Àº µ¥ÀÌÅÍµµ »ğÀÔ
+	// ë‚¨ì€ ë°ì´í„°ë„ ì‚½ì…
 	if (i > middle) {
 		while (j <= n)
 		{
