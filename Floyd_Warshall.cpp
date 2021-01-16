@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-int INF = 100000000; // 1¾ï
+int INF = 100000000; // 1ì–µ
 int a[4][4] = { {0,5,INF,8},
 {7,0,9,INF},
 {2,INF,0,4},
@@ -8,9 +8,9 @@ int a[4][4] = { {0,5,INF,8},
 int num = 4;
 
 
-// ¸ğµç Á¤Á¡¿¡¼­ ¸ğµç Á¤Á¡À¸·ÎÀÇ ÃÖ´Ü°æ·Î
+// ëª¨ë“  ì •ì ì—ì„œ ëª¨ë“  ì •ì ìœ¼ë¡œì˜ ìµœë‹¨ê²½ë¡œ
 void FloydWarshall() {
-	// °æÀ¯ÇÏ´Â Á¤Á¡ : i
+	// ê²½ìœ í•˜ëŠ” ì •ì  : i
 	for (int i = 0; i < num; i++) {
 		// j -> k
 		for (int j = 0; j < num; j++) {
@@ -20,14 +20,14 @@ void FloydWarshall() {
 				if (j == k) continue;
 
 				if (a[j][k] > a[j][i] + a[i][k]) {
-					a[j][k] = a[j][i] + a[i][k]; // °»½Å
+					a[j][k] = a[j][i] + a[i][k]; // ê°±ì‹ 
 				}
 			}
 		}
 	}
 }
 
-int main(void)
+int main(void) 
 {
 	FloydWarshall();
 	for (int i = 0; i < num; i++) {
