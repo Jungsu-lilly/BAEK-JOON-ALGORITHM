@@ -17,7 +17,7 @@ int main(void)
 			int a, b;
 			scanf("%d %d", &a, &b);
 			v[a].push_back(b);
-			inDegree[b]++; // ³ëµå aÀÇ ÁøÀÔÂ÷¼ö 1Áõ°¡
+			inDegree[b]++; // ë…¸ë“œ aì˜ ì§„ì…ì°¨ìˆ˜ 1ì¦ê°€
 		}
 	}
 
@@ -30,12 +30,12 @@ int main(void)
 	}
 
 	while (!q.empty()) {
-		int x = q.front(); // Å¥ °¡Àå ¾Õ¿¡ °ª
+		int x = q.front(); // í ê°€ì¥ ì•ì— ê°’
 		printf("%d ", x);
 		q.pop();
 		for (int i = 0; i < v[x].size(); i++) {
 			int y = v[x][i];
-			inDegree[y] -= 1; // ÀÎÁ¢ ³ëµå °£¼± ²÷¾îÁÜ.
+			inDegree[y] -= 1; // ì¸ì ‘ ë…¸ë“œ ê°„ì„  ëŠì–´ì¤Œ.
 		}
 		for (int i = 1; i <= n; i++) {
 			if (inDegree[i] == 0) {
