@@ -28,7 +28,7 @@ void findString(string parent, string pattern) {
 				}
 			}
 			if (finded)
-				cout << i + 1 << "¹øÂ°¿¡¼­ ¹ß°ßÇß½À´Ï´Ù." << endl;
+				cout << i + 1 << "ë²ˆì§¸ì—ì„œ ë°œê²¬í–ˆìŠµë‹ˆë‹¤." << endl;
 		}
 	}
 }
